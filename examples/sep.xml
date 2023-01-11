@@ -1,0 +1,42 @@
+<xmldoc>
+<page>
+	<t color="blue" size="25" align="center"> HowTo use the sep tag </t>
+	
+	<t color="rgb:272" x="15" size="20"  align="left"> 
+		Parametres: 
+	</t>
+
+	<t x="30" y="up" size="15" align="left">
+		color: defines the color of the separation line
+	</t>
+	
+	<t x="30" y="up" size="15" align="left"> 
+		size: :defines the size of the line ( PDF in milimetres ) 
+	</t>
+	<t x="30" y="up" size="15" align="left">
+		space: defines the space that will be truncated the line 
+	</t>
+	<t x="30" y="up" size="15" align="left">
+		line:  defines how long the line have to been truncated
+	</t>
+	
+	
+	<t size="15" align="left">
+		the easy way to do that is simply 
+		Code: &lt;sep/&gt;  
+	</t> 
+	<sep/> 
+	<t size="15" align="left">
+		Now with a weight and color :)
+		Code: &lt;sep color="blue" size="10"/&gt;
+	</t>
+	<sep color="blue" size="10" />
+	
+	<t size="15" align="left">
+		with line and space 
+		Code: &lt;sep color="red" size="4" space="4" line="6" /&gt;
+	</t>
+	<sep color="red" size="4" space="4" line="6"/>
+
+</page>
+</xmldoc>

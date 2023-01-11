@@ -1,0 +1,82 @@
+dnl dnl dnl dnl dnl dnl dnl dnl
+dnl                         dnl
+dnl  xml2doc autoconf file  dnl
+dnl                         dnl
+dnl dnl dnl dnl dnl dnl dnl dnl
+
+
+# Checking headers
+AC_INIT(src/defs.h)
+AC_LANG_C
+AC_ISC_POSIX
+AC_PROG_CPP
+# AC_PATH_PROG(LS,ls,no)
+# if test $LS = "no"; then ...
+AC_HEADER_STDC
+AC_CHECK_HEADERS(stdio.h libxml/parser.h time.h)
+# AC_CANONICAL_HOST usage install-sh
+AC_PROG_MAKE_SET
+#SUBDIRS=src
+
+# Checking libs
+AC_CHECK_LIB(xml2,xmlParseFile, ,
+   AC_MSG_ERROR([*** xml2doc requires libxml2-dev.]))
+
+AC_CHECK_HEADERS(pdflib.h,,enable_pdf="no")
+#AC_CHECK_LIB(pdf,PDF_new,,ENABLE_PDF="no")
+
+AC_PROG_MAKE_SET
+
+### PDF OPTIONS ###
+AC_ARG_ENABLE(pdf,
+[  --disable-pdf           build with pdf output [default=no]],, enable_pdf="yes")
+AC_CHECK_HEADERS(pdflib.h,,enable_pdf="no")
+#AC_CHECK_LIB(pdf,PDF_new,,ENABLE_PDF="no")
+AC_MSG_WARN(Ruls $enable_pdf)
+if test "$enable_pdf" = "no"; then
+  AC_MSG_WARN(Building without PDF support)
+else
+  AC_MSG_WARN(Building with PDF suuport)
+  enable_pdf="yes"
+  I_PDF="-DWITH_PDF `pdflib-config --includes`"
+  L_PDF=`pdflib-config --libs`
+fi
+
+## DEBUG OPTIONS ###
+AC_ARG_ENABLE(debug,
+[  --enable-debug          Enable debugging symbols and extra output [default=no]],,
+enable_debug="no")
+if test "$enable_debug" != "no"; then
+  enable_debug="yes"
+  DEBUG="-DDEBUG -ggdb"
+fi
+
+
+## PREFIX OPTIONS ###
+AC_PREFIX_DEFAULT(/usr/local)
+if test x$prefix = xNONE; then
+        prefix=$ac_default_prefix
+fi
+PREFIX=$prefix
+
+VERSION=`cat VERSION`
+AC_SUBST(VERSION)
+AC_SUBST(I_PDF)
+AC_SUBST(L_PDF)
+AC_SUBST(DEBUG)
+AC_SUBST(PREFIX)
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+doc/Makefile
+examples/Makefile
+])
+
+AC_MSG_RESULT([
+Build options:
+  Version         $VERSION
+  Install prefix  $prefix
+  PDF output      $enable_pdf
+  Debug version   $enable_debug
+]);

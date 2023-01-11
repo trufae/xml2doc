@@ -1,0 +1,45 @@
+  XmlDoc is a word processing tool that parses xml documents and output his
+content into a nice PDF, AbiWord, HTML and plain text (nowadays :).
+
+  In a little way to explain this project we can say that is a lightweight
+version of DocBook, isn't enought powerful compared to DocBook, but it is
+little, faster and easier to learn.
+
+  The DTD that uses xml2doc is in continuesly development, and I hope to make
+them compatibles between version. It is very easy to learn these tags, because
+are very similar to HTML, and reading some xmldocs or reading directly to the
+sources you can understand how to use them without any problems.
+
+  XmlDoc uses libxml2 to parse and read XML tags, and pdflib to write PDF
+content into the output file. This last library has an "strange license" and
+for this reason isn't a debian/package. Its license says that you can use this
+library freely if you write in opensource and free code.
+
+  And if you want to write a propietary code you must pay this license.
+
+  This is a GPLed software...by this way I can't get problems using them.
+
+  
+This program can be downloaded from: 
+http://xml2doc.sourceforge.net
+
+You can contact me at: 
+pancake@phreaker.net
+http://pancake.host.sk
+
+-------------------------------------------
+Tested on NetBSD, Debian/SID, and Gentoo.
+
+--
+
+
+XmlDoc is just a simple text processor that works like DocBook using tags to
+define text and image attributes. Is just a lightweight program that allows
+you to write nice documents on PDF, HTML and Plain text (at the moment). This
+project is always under development.
+
+PDFlib:
+
+http://pdflib.com/products/pdflib/download/PDFlib-Lite-5.0.0-Unix-src.tar.gz
+
+

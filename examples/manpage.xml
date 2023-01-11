@@ -1,0 +1,24 @@
+<xmldoc>
+<info keywords="LS 3" 
+      title="Command to list files"
+      trapped="ls"/>
+<page>
+<t size="20">NAME</t>
+<t>This is a manpage example generated with xml2doc. As you can see, the same xml file can be converted in a lot of different formats.
+
+You can put \fBBold\fP text =)
+jiji
+</t>
+<t size="20">FILES</t>
+<t underline="true">
+   /etc/passwd
+   /etc/mk.conf
+   /usr/share/doc/xml2doc/*
+</t>
+<t size="20">SEE ALSO</t>
+<t bold="true">
+   strtok(3)
+   printf(1)
+</t>
+</page>
+</xmldoc>

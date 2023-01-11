@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+
+PLEASE NOTE: PDF output
+
+You could use the XML2DOC_USE_PDF directive in mk.conf to enable or 
+disable the PDF output on xml2doc, note that by default is disabled.
+
+===========================================================================

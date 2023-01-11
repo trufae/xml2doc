@@ -1,0 +1,28 @@
+<xmldoc>
+  <default size="20" trim="true"/>
+  
+<!-- -->
+<page>
+  <t trim="false" underline="true">
+  Fonts supported by pdflib: (also test html conversion)
+
+  </t>
+  <t size="-=30%" font="Times-Roman">Times-Roman</t>
+  <t font="Times-Bold">Times-Bold</t>
+  <t font="Times-Italic">Times-Italic</t>
+  <t font="Times-BoldItalic">Times-BoldItalic</t>
+  <t font="Helvetica">
+                      Helvetica</t>
+  <t font="Helvetica-Bold">Helvetica-Bold</t>
+  <t font="Helvetica-BoldOblique">Helvetica-BoldOblique</t>
+  <t font="Helvetica-Oblique">Helvetica-Oblique</t>
+  <t font="Courier">
+                      Courier</t>
+  <t font="Courier-Bold">Courier-Bold</t>
+  <t font="Courier-BoldOblique">Courier-Oblique</t>
+  <t font="Courier-Oblique">Courier-Oblique</t>
+</page>
+
+
+</xmldoc>
+

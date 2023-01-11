@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<xml2doc>
+
+<add type="color" name="grin">#00ff00</add>
+
+<info title="Document molt guapo"/>
+<page bgcolor="rgb:990">
+<t size="20" color="rgb:600">Títol del llibre</t>
+<t x="50">Texte de colorets</t>
+<t color="gray">molt llarg i que mola que te cagas nen. x"D</t>
+<sep color="blue" size="10" space="10" line="10"/>
+<sep color="grin" size="10" space="10" line="10"/>
+<sep color="red" size="10" space="10" line="10"/>
+</page>
+<page bgcolor="rgb:009">
+<t>jojo</t>
+</page>
+</xml2doc>

@@ -1,0 +1,20 @@
+<xmldoc>
+<page>
+<t size="20" align="center"> HowTo use list tag ^^ </t>
+
+<t size="10" align="left" color="blue">
+
+You can do two types of list , normal lists and index list:	
+</t>
+
+<list titol="Treball de recerca" depth="0"/>
+<list titol="1 Que es Wirelesss ?" depth="2"> </list>
+<list titol="1.1 Per a que serveix?" depth="3" space="6"> </list>
+<list titol="1.1.1 prova :P ?" depth="4" link="http:\\www.google.com" color="red"> </list>
+
+
+<list titol="blurps" depth="2" type="index" pag="4" link="jojo" color="green"> </list>
+<list titol="blurps" depth="2" type="index" pag="4"> </list>
+<list titol="blurps" depth="2" type="index" pag="4"> </list>
+</page>
+</xmldoc>

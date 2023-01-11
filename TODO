@@ -1,0 +1,25 @@
+TODO list
+=========
+
+* bookmark_output
+* text at bottom of image
+* paper color
+* DTD support
+* list tag to allow unordered lists
+  type="dec" "dot" "hex"
+  font="" size="" x=""
+* Ascii-art image rendering
+* Basic tutorial and documentation
+* draw tag to create image environments
+* link to libpng to draw image environments
+* Support for inputs (-iA ) 
+   inputs abiword outputs it in xml2doc format
+
+
+Outputs TODO
+============
+
+* plain text with ANSI escape chars (colors...)
+* latex output
+* docbook output
+

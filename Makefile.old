@@ -1,0 +1,34 @@
+#
+# xmlPdf makefile
+#               - pancake
+#
+
+all:
+	@printf "\e[32mUsage make [build|clean|dist|examples|doc|install|uninstall]\e[0m\n"
+
+build:
+	make -C src/ all 2>/dev/null || gmake -C src/ all
+
+clean:
+	make -C src/ clean 2>/dev/null || gmake -C src/ clean
+	make -C examples/ clean || gmake -C examples/ clean
+	make -C doc/ clean || gmake -C doc/ clean
+	rm -f *.pdf *.html *.txt *~ .*.swp
+
+dist:	clean
+	@rm -f ../xml2doc-*
+	@cd .. && tar czvf xml2doc-`date +%Y%m%d`.tgz xml2doc
+
+examples: build
+	make -C examples/ all || gmake -C examples/ all
+
+doc:
+	make -C doc/ all || gmake -C doc/ all
+	
+install:
+	make -C src/ install 2> /dev/null || gmake -C src/ install
+	@printf "\e[32m[ Install Done ]\e[0m\n"
+
+uninstall:
+	rm -f /usr/bin/xml2doc
+	@printf "\e[32m[ Uninstall Done ]\e[0m\n"

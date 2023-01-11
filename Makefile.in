@@ -1,0 +1,49 @@
+CC = @CC@
+VERSION = @VERSION@
+CFLAGS = @CFLAGS@
+PREFIX = @PREFIX@
+
+all:	build
+	@printf "\e[32mBuild ok\e[0m\n"
+
+build:
+	@printf "\e[32mBuilding xml2doc\e[0m\n"
+	$(MAKE) -C src/ build
+	@printf "\e[32mxml2doc Build done\e[0m\n"
+
+doc:
+	@printf "\e[32mBuilding documentation and examples\e[0m\n"
+	$(MAKE) -C doc/ build
+	$(MAKE) -C examples/ build
+
+
+dist:	mrproper
+	@date +%Y%m%d > VERSION
+	@rm -f Makefile ../xml2doc-*
+	@cd .. && tar czvf xml2doc-`cat xml2doc/VERSION`.tgz xml2doc
+	
+
+mrproper:	clean
+	rm -rf config.log config.status Makefile autom4te.cache
+
+clean:
+	@printf "\e[32mCleaning...\e[0m\n"
+	@rm -rf autom4te.cache
+	$(MAKE) -C src/ clean
+	$(MAKE) -C examples/ clean
+	$(MAKE) -C doc/ clean
+	@printf "\e[32mCleaning Done\e[0m\n"
+
+install:
+	@printf "\e[32mInstalling xml2doc using prefix : $(PREFIX)\e[0m\n"
+	$(MAKE) -C src/      install
+	$(MAKE) -C doc/      install
+	$(MAKE) -C examples/ install
+	@printf "\e[32mInstall DONE\e[0m\n"
+
+remove:
+	@printf "\e[32mDeinstalling xml2doc using prefix : $(PREFIX)\e[0m\n"
+	$(MAKE) -C src/      remove
+	$(MAKE) -C doc/      remove
+	$(MAKE) -C examples/ remove
+	@printf "\e[32mDeinstallation done\e[0m\n"

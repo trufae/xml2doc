@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<xmldoc>
+<default 
+      font="Times-Roman"
+      autonum="true"
+      trim="false"
+      />
+<info title="Documents in XML"
+      author="pancake"
+      />
+
+<page num="1">
+<bookmark name="Introduction" node="0"/>
+<img src="logo.png"/>
+<sep/>
+  <t color="rgb:008">
+
+  XmlDoc is a word processing tool that parses xml documents and output his content into a nice PDF, HTML and plain text (nowadays :).
+
+  In a little way to explain this project we can say that is a lightweight version of DocBook, isn't enought powerful compared to DocBook, but it is little, faster and easier to learn.
+
+  The DTD that uses xml2doc is in continuesly development, and I hope to make them compatibles between version. It is very easy to learn these tags, because are very similar to HTML, and reading some xmldocs or reading directly to the sources you can understand how to use them without any problems.
+
+  XmlDoc uses libxml2 to parse and read XML tags, and pdflib to write PDF content into the output file. This last library has an "strange license" and for this reason isn't a debian/package. Its license says that you can use this library freely if you write in opensource and free code.
+
+  And if you want to write a propietary code you must pay this license.
+
+  This is a GPLed software...by this way I can't get problems using them.
+
+  </t>
+
+
+  <sep/>
+  <t trim="true" color="rgb:000">
+  This program can be downloaded from: </t>
+  <t underline="true">http://xml2doc.sourceforge.net</t>
+  <t trim="true">
+  You can contact me at: </t>
+  <t underline="true">pancake@phreaker.net</t>
+  <t underline="true">http://pancake.host.sk</t>
+  <sep/>
+
+<t>Tested on NetBSD, Debian/SID, and Gentoo.</t>
+  
+</page>
+<page>
+<bookmark name="reep" node="0"/>
+<t>
+XmlDoc is just a simple text processor that works like DocBook using tags to define text and image attributes. Is just a lightweight program that allows you to write nice documents on PDF, HTML and Plain text (at the moment). This project is always under development.
+</t>
+<t>
+PDFlib:
+</t>
+<t underline="true">
+http://pdflib.com/products/pdflib/download/PDFlib-Lite-5.0.0-Unix-src.tar.gz
+</t>
+</page>
+</xmldoc>
+

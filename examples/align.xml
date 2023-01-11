@@ -1,0 +1,24 @@
+<xmldoc>
+<page>
+<t size="14">Align examples</t>
+<sep/>
+<t>
+Texte alineat a l'esquerra.
+</t>
+<t align="center">
+pop
+cacatua
+aixo es un poema molt maco
+escrit amb xmldoc
+:D hehe
+q boniiiic x)
+</t>
+<t align="right">
+Sergi Alvarez i Capilla
+tarara x)
+</t>
+<t align="justify">
+Aquest texte el faig molt llarg pq aixi es vegi com treballo els justificats de texte per agafar els marges be i tal... :P espero q realment ho estigui fent...pq sino quedare fatal xDDDD ejeje :)
+</t>
+</page>
+</xmldoc>

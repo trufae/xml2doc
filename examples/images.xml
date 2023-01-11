@@ -1,0 +1,7 @@
+<xmldoc>
+<page>
+An example putting 2 images in different formats and resizing them
+   <img src="logo.png"/>
+   <img x="20%" src="logo.png" scale="2.0"/>
+</page>
+</xmldoc>

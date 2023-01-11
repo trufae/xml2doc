@@ -1,0 +1,42 @@
+<xmldoc>
+<default font="Helvetica"/>
+<page>
+  <t size="20"> TAGS documentation </t>
+  <sep/>
+  <!-- t trim="true" align="left" -->
+<t size="14" color="rgb:015">
+&lt;bookmark&gt;</t>
+           <t x="30"> This tag is used to put bookmarks links and branches into the PDF document. This may be useful to write an index for the content of all the pages.</t>
+	   <t x="30" color="rgb:072">open="bool"</t>
+	        <t y="up" x="120">- Is this bookmark tree opened? (default="false")</t>
+	   <t x="30" color="rgb:072">node="number"</t>
+	        <t y="up" x="120">- A node number to follow the tree (default="0")</t>
+	   <t x="30" color="rgb:072">name="string"</t>
+	        <t y="up" x="120">- A string representing the information. (must be defined by user)</t>
+<t size="14" color="rgb:015">
+&lt;default&gt;</t>
+           <t x="30"> This tag allows user to change default values.</t>
+	   <t x="30" color="rgb:072">font="string"</t>
+	        <t y="up" x="120">- Font name to use: (could be: Helvetica-TimesRoman-Courier)</t>
+	   <t x="30" color="rgb:072">autonum="bool"</t>
+	        <t y="up" x="120">- Autonumerate pages. (default="false")</t>
+	   <t x="30" color="rgb:072">size="number"</t>
+	        <t y="up" x="120">- Font size to use. (default="12")</t>
+	   <t x="30" color="rgb:072">linespacing="#"</t>
+	        <t y="up" x="120">- Space number between every textline. (default="2")</t>
+	   <t x="30" color="rgb:072">wordspacing="#"</t>
+	        <t y="up" x="120">- Space between every word (default="0")</t>
+<t size="14" color="rgb:015">
+  &lt;img&gt; Draw an image.
+  &lt;info&gt; Set info for this document.
+  &lt;page&gt; Page section tag.
+  &lt;sep&gt; Draw an horitzontal separator.
+  &lt;eof&gt; Force the end of document.
+  &lt;include&gt; Allows to include another file.
+  &lt;reset&gt; Resets to default settings.
+  &lt;t&gt; Text tag.
+  </t>
+  <sep/>
+  <t>For more information please refer to the sources ( parse_*.c and defs.* files ).</t>
+</page>
+</xmldoc>

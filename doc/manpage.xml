@@ -1,0 +1,35 @@
+<xmldoc>
+<info keywords="xml2doc 1" 
+      title="XML converter"
+      trapped="ls"/>
+<page>
+
+<t size="20">NAME</t>
+<t>xml2doc  -  Xml to Documentation format converter.</t>
+
+<t size="20">SYNOPSIS</t>
+<t>\fBxml2doc\fP -o[THPM] infile.xml outfile.[txt|html|pdf|man]</t>
+
+<t size="20">DESCRIPTION</t>
+<t>\fBXml2Doc\fP is a xml parser that allows you to generate documents writting them in an easy xml and output them to different formats (TXT,HTML,MAN,PDF,DocBook,LaTeX,...).
+
+In a simple way it seems like DocBook concept, but in a more specific way. xml2doc is a lightweight program that converts an "xml2doc" document to other formats, without using other components like DocBook do with LaTeX.
+
+To run xml2doc just run in conversion mode:
+
+	$ xml2doc -oP example.xml example.pdf
+
+This will produce a PDF document from example.xml (xml2doc file).
+
+</t>
+
+<t size="20">OPTIONS</t>
+<t>\fB-o\fP[THPM] - Output in Text|Html|Pdf|Manpage format.</t>
+
+
+<t size="20">SEE ALSO</t>
+<t bold="true">
+   http://xml2doc.sourceforge.net/ 
+</t>
+</page>
+</xmldoc>

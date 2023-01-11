@@ -1,0 +1,8 @@
+Here you can find different files to build xml2doc using your
+favorite package system.
+
+At the moment there'r these:
+
+* pkgsrc - Written by pancake (thx2xtraeme)
+* gentoo - Thanks to Brainstorm and pof
+* debian - Written by kozko

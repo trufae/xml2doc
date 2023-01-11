@@ -1,0 +1,10 @@
+Source: xml2doc
+Section: unknown
+Priority: optional
+Maintainer: pancake (pancake@phreaker.net)
+Package: xml2doc
+Architecture: i386
+depend: libxml2-dev, libpdf
+Description: XML to document formats converter
+Version: 0.1
+
