@@ -1,4 +1,4 @@
-PREFIX = /usr
+PREFIX = /usr/local
 XD=../src/xml2doc
 
 all:

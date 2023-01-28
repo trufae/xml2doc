@@ -15,7 +15,6 @@ IPATH=-I/usr/pkg/include/libxml2 -I/usr/include/libxml2 -I. -I/usr/pkg/include -
 LPATH=-L/usr/pkg/lib -L/usr/local/lib
 CFLAGS+=-Wall -c $(IPATH) $(I_PDF)\
 	-DVERSION=\"$(VERSION)\" $(DEBUG)\
-	-fno-asm -funroll-all-loops -fstrength-reduce -frerun-loop-opt \
 	-x c -fshort-enums
 LFLAGS=-lxml2 $(L_PDF) $(LPATH)
 BIN=xml2doc
@@ -35,10 +34,6 @@ remove:
 build: $(OBJ)
 	@printf "\n\e[32mLinking objects...\e[0m\n"
 	$(CC) $(LFLAGS) $(OBJ) -o $(BIN)
-	@if ( test -z "$(DEBUG)" ); then \
-	     echo "Stripping symbols..."; \
-	     strip -s $(BIN); \
-	 fi
 	@printf "\n\n\e[32mCompilation process done.\e[0m\n"
 
 main.o: main.c main.h
